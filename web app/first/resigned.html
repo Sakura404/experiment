@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+		<script type="text/javascript">
+			function rangechange(event) {
+				event = event ? event : window.event;
+				var obj = event.srcElement ? event.srcElement : event.target;
+				document.getElementById("num-text").value=obj.value
+			}
+		</script>
+		<style type="text/css">
+			#resignedpage {
+				margin: 0 auto;
+				max-width: 400px;
+				text-align: center;
+				padding: 1.25rem;
+				box-shadow: 1px 1px 2px black;
+			}
+
+			#resignedpage form {
+				text-align: left;
+			}
+
+			#num-text {
+				width: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="resignedpage">
+			<h1>HTML5学习系统</h1>
+			<p><a href="#">首页</a> | <a href="#">注册 </a> | <a href="#">登录</a></p>
+			<form id='resign' action="" method="post">
+				<label>输入注册信息</label><br>
+				<label>姓名：</label><input type="text" placeholder="请输入你的名字" /><br>
+				<label>密码：</label><input type="password" placeholder="请输入你的密码" /><br>
+				<label>性别：</label><input type="radio" name="sex" />男 <input type="radio" name="sex" />女<br>
+				<label>出生日期：</label><input type="date" /><br>
+				<label>出生城市：</label><select>
+					<option value="guanzhou">广州</option>
+					<option value="zhanjian">湛江</option>
+				</select><br>
+				<label>邮箱：</label><input type="email" name="email" value="" /><br>
+				<label>最爱的网站：</label><input type="url" name='web' /><br>
+				<label>最爱的颜色</label><input type="color" name="color" /><br>
+				<label>最喜欢的数字</label><input type="range" name="num-range" id="num-range" value=""
+					onchange="rangechange()" />
+				<input type="number" name="num-text" id="num-text" value="" /><br>
+				<input type="submit" value="提交" /><input type="reset" />
+
+
+			</form>
+		</div>
+
+	</body>
+</html>
