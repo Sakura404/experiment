@@ -8,7 +8,10 @@
 			function rangechange(event) {
 				event = event ? event : window.event;
 				var obj = event.srcElement ? event.srcElement : event.target;
-				document.getElementById("num-text").value=obj.value
+				if (document.getElementById("num-range").value != document.getElementById("num-text").value) {
+					document.getElementById("num-text").value = obj.value
+					document.getElementById("num-range").value = obj.value
+				}
 			}
 		</script>
 		<style type="text/css">
@@ -31,27 +34,29 @@
 	</head>
 	<body>
 		<div id="resignedpage">
-			<h1>HTML5学习系统</h1>
-			<p><a href="#">首页</a> | <a href="#">注册 </a> | <a href="#">登录</a></p>
+			<header>
+				<h1>HTML5学习系统</h1>
+				<nav><a href="index.html">首页</a> | <a href="resigned.html">注册 </a> | <a href="login.html">登录</a></nav>
+			</header>
 			<form id='resign' action="" method="post">
-				<label>输入注册信息</label><br>
-				<label>姓名：</label><input type="text" placeholder="请输入你的名字" /><br>
-				<label>密码：</label><input type="password" placeholder="请输入你的密码" /><br>
-				<label>性别：</label><input type="radio" name="sex" />男 <input type="radio" name="sex" />女<br>
-				<label>出生日期：</label><input type="date" /><br>
-				<label>出生城市：</label><select>
-					<option value="guanzhou">广州</option>
-					<option value="zhanjian">湛江</option>
-				</select><br>
-				<label>邮箱：</label><input type="email" name="email" value="" /><br>
-				<label>最爱的网站：</label><input type="url" name='web' /><br>
-				<label>最爱的颜色</label><input type="color" name="color" /><br>
-				<label>最喜欢的数字</label><input type="range" name="num-range" id="num-range" value=""
-					onchange="rangechange()" />
-				<input type="number" name="num-text" id="num-text" value="" /><br>
-				<input type="submit" value="提交" /><input type="reset" />
-
-
+				<fieldset>
+					<legend>输入注册信息</legend>
+					<label>姓名：</label><input type="text" placeholder="请输入你的名字" /><br>
+					<label>密码：</label><input type="password" placeholder="请输入你的密码" /><br>
+					<label>性别：</label><input type="radio" name="sex" />男 <input type="radio" name="sex" />女<br>
+					<label>出生日期：</label><input type="date" /><br>
+					<label>出生城市：</label><select>
+						<option value="guanzhou">广州</option>
+						<option value="zhanjian">湛江</option>
+					</select><br>
+					<label>邮箱：</label><input type="email" name="email" value="" /><br>
+					<label>最爱的网站：</label><input type="url" name='web' /><br>
+					<label>最爱的颜色</label><input type="color" name="color" /><br>
+					<label>最喜欢的数字</label><input type="range"  name="num-range" id="num-range" value="0"
+						onchange="rangechange()" />
+					<input type="number" name="num-text" min="0" max="100" id="num-text" value="0" onchange="rangechange()" /><br>
+					<input type="submit" value="提交" /><input type="reset" />
+				</fieldset>
 			</form>
 		</div>
 

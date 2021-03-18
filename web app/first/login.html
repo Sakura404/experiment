@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+		<style type="text/css">
+			#logindpage {
+				margin: 0 auto;
+				max-width: 400px;
+				text-align: center;
+				padding: 1.25rem;
+				box-shadow: 1px 1px 2px black;
+			}
+
+			#logindpage form {
+				text-align: left;
+			}
+		</style>
+		<script type="text/javascript">
+			function checkform() {
+				event.preventDefault();
+				var f = document.getElementById("login");
+				if (f["username"].value == "orga" && f["password"].value == "123456") {
+					alert("登陆成功");
+					window.location = "index.html";
+				} else {
+					alert("登录失败");
+					return false;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="logindpage">
+			<header>
+				<h1>HTML5学习系统</h1>
+				<nav><a href="index.html">首页</a> | <a href="resigned.html">注册 </a> | <a href="login.html">登录</a></nav>
+			</header>
+			<form id="login" action="#" method="post" onsubmit="return checkform()">
+				<fieldset id=" 123">
+					<legend>请输入登录信息</legend>
+					<label>姓名:</label><input type=" text" name="username" value="" placeholder="请输入你的姓名" /><br>
+					<label>密码:</label><input type="password" name="password" placeholder="请输入你的密码" value="" /><br>
+					<input type="submit" value="提交" onclick="return checkform()" /><input type="reset" />
+				</fieldset>
+			</form>
+		</div>
+	</body>
+</html>
