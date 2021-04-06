@@ -14,7 +14,8 @@ public class HelloWorldServlet extends GenericServlet {
 		System.out.println("hello");
 	}
 
-	public void service (ServletRequest request, ServletResponse respones) throws ServletException {
+	public void service(ServletRequest request, ServletResponse respones) 
+			throws ServletException {
 		System.out.println("them");
 	}
 

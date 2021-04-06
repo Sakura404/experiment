@@ -17,7 +17,8 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/Servlet01")
 public class Servlet01 extends GenericServlet {
-	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
+	public void service(ServletRequest request, ServletResponse response) 
+			throws ServletException, IOException {
 		PrintWriter out = response.getWriter();
 		out.println("this is power");
 	}
