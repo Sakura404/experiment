@@ -1,0 +1,8 @@
+package สตั้3;
+
+public class Context{
+	String context;
+	public String print() {
+		return context;
+	}
+}

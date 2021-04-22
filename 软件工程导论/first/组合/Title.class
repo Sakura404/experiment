@@ -1,0 +1,8 @@
+package สตั้3;
+
+public class Title{
+	String context;
+	public String print() {
+		return context;
+	}
+}

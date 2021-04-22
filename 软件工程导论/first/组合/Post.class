@@ -1,0 +1,9 @@
+package สตั้3;
+
+public class Post{
+	Title title;
+	Context context;
+	public String print() {
+		return title+"\n"+context;
+	}
+}
