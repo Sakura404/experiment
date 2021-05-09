@@ -11,14 +11,15 @@
 }
 
 
-
 .header_title {
     margin: 0 auto;
     width: 1.3rem;
     padding: 0.3rem;
 
 }
-
+.main{
+    overflow: hidden;
+}
 .header_drawdown {
     color: blue;
     transform: rotate(90deg);
@@ -158,7 +159,46 @@
 .recent_content ul li>* {
     display: inline-block;
 }
-.banner{
+
+.banner {
+    background-color: white;
     padding: .3rem;
-    height: ;
+    width: 7.68rem;
+    height: 2.5rem;
+}
+
+.post_title {
+  line-height: 1rem;
+    margin:0 .3rem;
+    font-size: 0.4rem;
+}
+
+.postslist {
+    background-color: rgba(128, 128, 128, 0.1);
+}
+
+.post_card {
+    height: 5.7rem;
+    margin: 0.3rem 0;
+    background-color: white;
+}
+
+.post_card img {
+    margin: 0.3rem;
+    width: 7.6rem;
+    height: 3.6rem;
+    margin-bottom: 0;
+    margin-top: .15rem;
+}
+
+.post_footer {
+
+    font-size: 0.25rem;
+    color: rgba(128, 128, 128, 0.514);
+    text-align: right;
+    margin: 0 0.3rem;
+}
+
+.footer img {
+    display: inline;
 }
